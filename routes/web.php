@@ -50,4 +50,19 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
         'uses'=>'CategoriesController@index',
         'as'=>'categories'
     ]);
+
+    Route::get('/category/edit/{id}',[
+        'uses'=>'CategoriesController@edit',
+        'as'=>'category.edit'
+    ]);
+    
+    Route::post('/category/update/{id}',[
+        'uses'=>'CategoriesController@update',
+        'as'=>'category.update'
+    ]);
+    
+    Route::get('/category/delete/{id}',[
+        'uses'=>'CategoriesController@destroy',
+        'as'=>'category.delete'
+    ]); 
 });
