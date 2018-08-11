@@ -23,7 +23,7 @@
 
     <!--Styles for RTL-->
 
-    <!--<link rel="stylesheet" type="text/css" href="app/css/rtl.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="{{ asset('app/css/rtl.css') }}">-->
 
     <!--External fonts-->
 
@@ -72,9 +72,9 @@
                             </div>
 
                             <div class="images-block">
-                                <img src="app/img/subscr-gear.png" alt="gear" class="gear">
-                                <img src="app/img/subscr1.png" alt="mail" class="mail">
-                                <img src="app/img/subscr-mailopen.png" alt="mail" class="mail-2">
+                                <img src="{{ asset('app/img/subscr-gear.png') }}" alt="gear" class="gear">
+                                <img src="{{ asset('app/img/subscr1.png') }}" alt="mail" class="mail">
+                                <img src="{{ asset('app/img/subscr-mailopen.png') }}" alt="mail" class="mail-2">
                             </div>
                         </div>
                     </div>

@@ -155,14 +155,18 @@
                                 <span class="long-line"></span>
                             </div>
                         </div>
+
+                        @include('includes.disqus')
                     </div>
 
                     <div class="row">
 
                     </div>
-
-
                 </div>
+
+                <br>
+                <br>
+                <br>
 
                 <!-- End Post Details -->
 
@@ -180,7 +184,7 @@
                             </div>
 
                             <div class="tags-wrap">
-                                @foreach($post->tags as $tag)
+                                @foreach($tags as $tag)
                                     <a href='#' class="w-tags-item">{{ $tag->tag }}</a>
                                 @endforeach
                             </div>
