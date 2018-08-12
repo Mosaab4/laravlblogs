@@ -28,7 +28,7 @@
                         </div>
                     @else
                         <h1 class="text-center">
-                            No Results Found
+                            No Results Found    
                         </h1>
 
                     @endif
