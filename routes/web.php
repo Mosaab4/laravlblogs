@@ -11,6 +11,9 @@
 |
 */
 
+use Newsletter;
+use Session;
+
 Route::get('/', [
     'uses'=>'FrontEndController@index',
     'as'=>'index'
@@ -39,6 +42,14 @@ Route::get('/results',function(){
                             ->with('categories',\App\Category::take(5)->get())
                             ->with('settings',\App\Setting::first())
                             ->with('query',request('query'));
+});
+
+
+Route::post('/subscribe',function(){    
+    $email = request('email');
+    Newsletter::subscribe($email);
+    Session::flash('subscribed','Successfully subscribed');
+    return redirect()->back();
 });
 
 Auth::routes();
