@@ -31,6 +31,16 @@ Route::get('/tag/{id}',[
     'as'=>'tag.single'
 ]);
 
+Route::get('/results',function(){
+    $posts = \App\Post::where('title','like','%' . request('query') . '%')->get();
+
+    return view('results')->with('posts',$posts)
+                            ->with('title','Search results: '.request('query'))
+                            ->with('categories',\App\Category::take(5)->get())
+                            ->with('settings',\App\Setting::first())
+                            ->with('query',request('query'));
+});
+
 Auth::routes();
 
 
