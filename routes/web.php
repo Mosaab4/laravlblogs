@@ -11,8 +11,7 @@
 |
 */
 
-use Newsletter;
-use Session;
+
 
 Route::get('/', [
     'uses'=>'FrontEndController@index',
